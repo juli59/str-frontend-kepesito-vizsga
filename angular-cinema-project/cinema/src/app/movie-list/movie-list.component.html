@@ -9,8 +9,15 @@
             <th></th>
           </tr>
         </thead>
+
         <tbody>
-          <tr class="table-row"></tr>
+          <tr *ngFor="let movie of movieList$ | async  "class="table-row"></tr>
+         <td>{{movie.title}}</td>
+         <td>{{movie.year}}</td>
+         <td>{{movie.category}}</td>
+         <td>
+           <button></button>
+         </td>
         </tbody>
     </table>
 </section>
